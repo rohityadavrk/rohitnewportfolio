@@ -81,7 +81,7 @@ export default function MyEicherCaseStudy() {
         <p className="mt-3 max-w-[55ch] text-lg leading-relaxed text-muted">
           Modernising an established fleet-management experience across web and mobile.
         </p>
-        <dl className="mt-5 grid gap-x-8 gap-y-3 border-t border-line pt-4 text-sm sm:grid-cols-3">
+        <dl className="mt-5 grid gap-x-8 gap-y-3 border-t border-line pt-4 text-sm sm:grid-cols-2">
           <div>
             <dt className="text-subtle">Platform</dt>
             <dd className="mt-0.5 font-medium">Web portal and mobile app</dd>
@@ -89,10 +89,6 @@ export default function MyEicherCaseStudy() {
           <div>
             <dt className="text-subtle">My role</dt>
             <dd className="mt-0.5 font-medium">UI/UX and product redesign</dd>
-          </div>
-          <div>
-            <dt className="text-subtle">Tool</dt>
-            <dd className="mt-0.5 font-medium">Figma</dd>
           </div>
         </dl>
       </header>

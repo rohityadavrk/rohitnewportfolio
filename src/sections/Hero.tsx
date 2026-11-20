@@ -2,7 +2,7 @@ import type { PointerEvent } from "react";
 import Navigation from "../components/Navigation";
 import { resumeUrl } from "../data/portfolio";
 
-const skills = ["Figma", "Prototyping", "User Flows", "User Research", "Wireframing"];
+const skills = ["Prototyping", "User Flows", "User Research", "Wireframing"];
 
 const focus = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent";
 

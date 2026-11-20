@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: "Inter:Regular", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
   --color-paper: #f8f9fa;
   --color-panel: #fff;
   --color-wash: #edf1f6;
@@ -161,64 +161,31 @@
     min-width: 0;
   }
 
-  .portfolio [data-node-id="1:332"] {
-    height: auto;
-  }
-
-  .portfolio [data-node-id="1:364"] {
+  .portfolio .experience-section {
     min-height: 0;
     padding: 72px 0;
   }
 
-  .portfolio [data-node-id="1:365"] {
+  .portfolio .experience-container {
     width: min(100% - 48px, 720px);
     padding: 0;
     gap: 48px;
   }
 
-  .portfolio [data-node-id="1:368"] {
+  .portfolio .experience-list {
     padding: 12px 0 12px 20px;
   }
 
-  .portfolio [data-node-id="1:377"],
-  .portfolio [data-node-id="1:387"] {
-    max-width: none;
-  }
-
-  .portfolio [data-node-id="1:378"],
-  .portfolio [data-node-id="1:388"] {
-    white-space: normal;
-  }
 
 }
 
 @media (max-width: 520px) {
-  .portfolio [data-node-id="1:365"] {
+  .portfolio .experience-container {
     width: calc(100% - 32px);
   }
 
-  .portfolio [data-node-id="1:368"] {
+  .portfolio .experience-list {
     padding-left: 12px;
   }
 
-  .portfolio [data-node-id="1:369"],
-  .portfolio [data-node-id="1:379"],
-  .portfolio [data-node-id="1:389"] {
-    padding-left: 24px;
-  }
-}
-
-@font-face {
-  font-family: "Instrument Serif:Regular";
-  src: url("https://static.figma.com/font/InstrumentSerif-Regular_1") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter:Regular";
-  src: url("https://static.figma.com/font/Inter_1") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
 }

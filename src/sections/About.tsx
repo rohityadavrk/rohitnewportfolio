@@ -14,7 +14,7 @@ export default function About() {
             I’m a UI/UX designer and frontend developer. I enjoy making everyday tasks easier to understand, from finding a vehicle to following a job application.
           </p>
           <p className="mt-3 max-w-[52ch] leading-relaxed text-muted">
-            I map user flows, sketch wireframes, and test prototypes in Figma and FigJam. I build responsive interfaces with HTML, CSS, JavaScript, and Bootstrap.
+            I map user flows, sketch wireframes, and test prototypes. I build responsive interfaces with HTML, CSS, JavaScript, and Bootstrap.
           </p>
           <div className="mt-7 border-t border-line pt-5">
             <h3 className="text-xl font-bold tracking-tight text-ink">Get in touch</h3>

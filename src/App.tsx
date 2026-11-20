@@ -30,9 +30,9 @@ function HomePage() {
 
   return (
     <div className="portfolio bg-paper flex justify-center w-full min-h-screen overflow-x-clip">
-      <div className="bg-paper content-stretch flex flex-col items-start relative w-[1440px] shrink-0" data-node-id="1:7" data-name="Html → Body">
-        <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-node-id="1:9" data-name="Container">
-          <div className="content-stretch flex flex-col h-auto items-center relative shrink-0 w-full" data-node-id="1:10" data-name="Main">
+      <div className="bg-paper content-stretch flex flex-col items-start relative w-[1440px] shrink-0">
+        <div className="content-stretch flex flex-col items-center relative shrink-0 w-full">
+          <div className="content-stretch flex flex-col h-auto items-center relative shrink-0 w-full">
             <Hero />
             <Work />
             <Experience />

@@ -79,6 +79,6 @@ export const projects: Project[] = [
 export const journey = [
   ["Apr 2025 – Present", "UI/UX Designer & Developer", "Sampark Softwares · Gurugram", "Design vehicle tracking, warehouse, inventory, supply chain, and HR workflows."],
   ["Feb 2024 – Mar 2025", "UI/UX Designer", "VanyaIT · Nagpur", "Designed a responsive job portal and music app features for chat, playlist sharing, and listening together."],
-  ["Aug 2023 – Jan 2024", "UI/UX Developer Trainee", "Chetu Inc. · Noida", "Worked on admin panels, e-commerce interfaces, and responsive apps using Figma, HTML, CSS, Bootstrap, JavaScript, and jQuery."],
+  ["Aug 2023 – Jan 2024", "UI/UX Developer Trainee", "Chetu Inc. · Noida", "Worked on admin panels, e-commerce interfaces, and responsive apps using HTML, CSS, Bootstrap, JavaScript, and jQuery."],
   ["Aug 2019 – Jul 2023", "B.Tech in Computer Science and Engineering", "Babu Banarasi Das Institute of Technology Management · Lucknow", ""],
 ] as const;
