@@ -1,0 +1,224 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: "Inter:Regular", "Helvetica Neue", Arial, sans-serif;
+  --color-paper: #f8f9fa;
+  --color-panel: #fff;
+  --color-wash: #edf1f6;
+  --color-accent-soft: #e6efff;
+  --color-line: #d6dce4;
+  --color-line-strong: #b8c2d0;
+  --color-ink: #242a31;
+  --color-muted: #49535e;
+  --color-subtle: #5b6676;
+  --color-accent: #1957b8;
+  --color-accent-strong: #164a9b;
+  --color-highlight: #ffe5a0;
+  --shadow-surface: 0 16px 40px rgb(44 57 78 / 0.08);
+}
+
+/* Custom cursor — small slate-grey box instead of the arrow */
+* {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Crect x='3' y='3' width='16' height='16' rx='3' fill='%235b6676' fill-opacity='0.35' stroke='%235b6676' stroke-width='1.5'/%3E%3C/svg%3E") 11 11, auto;
+}
+
+/* The same drafting surface runs behind both the hero and the navigation. */
+.hero-backdrop,
+.drafting-surface {
+  background:
+    radial-gradient(circle, #8191a740 1px, transparent 1.5px) 0 0 / 28px 28px,
+    linear-gradient(155deg, var(--color-paper) 15%, var(--color-wash) 70%, #e9edf3);
+}
+
+.hero-backdrop::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  background: repeating-radial-gradient(
+    ellipse at 57% -36%,
+    transparent 0 105px,
+    #7796c13d 106px 107px,
+    transparent 108px 138px
+  );
+  mask-image: linear-gradient(#000, transparent);
+}
+
+.hero-highlight {
+  background: linear-gradient(transparent 68%, var(--color-highlight) 68% 93%, transparent 93%);
+}
+
+.hero-name {
+  font-size: clamp(2.8rem, 10.4vw, 5.5rem);
+}
+
+@media (min-width: 850px) {
+  .hero-name { font-size: clamp(2.8rem, 8.7vw, 8rem); }
+}
+
+.hero-portrait-backdrop {
+  background:
+    radial-gradient(ellipse at var(--portrait-light-x, 50%) var(--portrait-light-y, 35%), #fffdf4 0%, transparent 65%),
+    linear-gradient(var(--color-accent-soft), var(--color-wash));
+}
+
+@keyframes portfolio-enter {
+  from { opacity: 0; transform: translateY(0.75rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:has(.portfolio) {
+    scroll-behavior: smooth;
+  }
+
+  .hero-enter {
+    animation: portfolio-enter 600ms cubic-bezier(.2, .7, .2, 1) both;
+  }
+
+  .hero-name { animation-delay: 70ms; }
+  .hero-name + .hero-enter { animation-delay: 140ms; }
+  .hero-enter + div.hero-enter:last-child { animation-delay: 210ms; }
+  .hero-portrait { animation-delay: 130ms; }
+
+  .motion-action {
+    transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+  }
+
+  .motion-action:active {
+    transform: translateY(1px);
+  }
+
+  .motion-card,
+  .hero-portrait-image {
+    transition: transform 260ms ease, box-shadow 260ms ease;
+  }
+
+  .about-portrait.reveal {
+    transition: opacity 0.8s cubic-bezier(.16, 1, .3, 1) 90ms,
+      transform 0.8s cubic-bezier(.16, 1, .3, 1) 90ms, box-shadow 260ms ease;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .motion-action:hover,
+  .motion-card:not(.reveal):hover,
+  .motion-card.reveal.in-view:hover,
+  .hero-portrait:hover .hero-portrait-image {
+    transform: translateY(-3px);
+  }
+
+  .motion-card:hover {
+    box-shadow: var(--shadow-surface);
+  }
+}
+
+/* Scroll-reveal — hidden until observed, then eases up into place */
+.reveal {
+  opacity: 0;
+  transform: translateY(48px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Keep a strip of each previous card visible as the next card enters. */
+.project-card-image {
+  height: clamp(12rem, 58vw, 28rem);
+}
+
+@media (min-height: 34rem) and (prefers-reduced-motion: no-preference) {
+  .project-card {
+    position: sticky;
+    top: calc(1rem + var(--stack-offset));
+  }
+
+  .project-card:focus-within {
+    z-index: 1;
+  }
+
+  .project-card-image {
+    max-height: calc(100svh - 13rem);
+  }
+}
+
+/* Responsive layout preserves the desktop composition while allowing every
+   section to reflow naturally on tablets and phones. */
+@media (max-width: 900px) {
+  .portfolio {
+    justify-content: stretch;
+  }
+
+  .portfolio > div {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .portfolio [data-node-id="1:332"] {
+    height: auto;
+  }
+
+  .portfolio [data-node-id="1:364"] {
+    min-height: 0;
+    padding: 72px 0;
+  }
+
+  .portfolio [data-node-id="1:365"] {
+    width: min(100% - 48px, 720px);
+    padding: 0;
+    gap: 48px;
+  }
+
+  .portfolio [data-node-id="1:368"] {
+    padding: 12px 0 12px 20px;
+  }
+
+  .portfolio [data-node-id="1:377"],
+  .portfolio [data-node-id="1:387"] {
+    max-width: none;
+  }
+
+  .portfolio [data-node-id="1:378"],
+  .portfolio [data-node-id="1:388"] {
+    white-space: normal;
+  }
+
+}
+
+@media (max-width: 520px) {
+  .portfolio [data-node-id="1:365"] {
+    width: calc(100% - 32px);
+  }
+
+  .portfolio [data-node-id="1:368"] {
+    padding-left: 12px;
+  }
+
+  .portfolio [data-node-id="1:369"],
+  .portfolio [data-node-id="1:379"],
+  .portfolio [data-node-id="1:389"] {
+    padding-left: 24px;
+  }
+}
+
+@font-face {
+  font-family: "Instrument Serif:Regular";
+  src: url("https://static.figma.com/font/InstrumentSerif-Regular_1") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter:Regular";
+  src: url("https://static.figma.com/font/Inter_1") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}

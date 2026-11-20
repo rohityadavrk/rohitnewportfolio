@@ -1,0 +1,11 @@
+{
+  "description": "Selected design projects, experience, and photography by Rohit Yadav.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  },
+  "title": "Rohit Yadav | UI/UX Designer"
+}

@@ -1,0 +1,13 @@
+const assetPathPrefix = "/assets";
+export const imgSanaaIllustration = `${assetPathPrefix}/65157.png`;
+export const imgProjectImgCfJ2I4CoPng = `${assetPathPrefix}/f3db0.png`;
+export const imgImg07731 = `${assetPathPrefix}/8bbd8.png`;
+export const imgImage1525 = `${assetPathPrefix}/dd743.png`;
+export const imgSocialRewardsRatingStar1StreamlinePixel = `${assetPathPrefix}/c26e5.svg`;
+export const imgSocialRewardsRatingStar1StreamlinePixel1 = `${assetPathPrefix}/32ade.svg`;
+export const imgSvg = `${assetPathPrefix}/cf9cf.svg`;
+export const imgSvg1 = `${assetPathPrefix}/6b452.svg`;
+export const imgSvg2 = `${assetPathPrefix}/85581.svg`;
+export const imgSvg3 = `${assetPathPrefix}/30bb5.svg`;
+export const imgSvg4 = `${assetPathPrefix}/ff5a9.svg`;
+export const imgSvg5 = `${assetPathPrefix}/d0fb2.svg`;
