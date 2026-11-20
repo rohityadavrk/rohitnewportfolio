@@ -60,7 +60,7 @@ function StudyImage({ name, width, height, caption, alt, cover = false }: {
   alt: string;
   cover?: boolean;
 }) {
-  const src = `/assets/my-eicher/${name}.jpg`;
+  const src = `${import.meta.env.BASE_URL}assets/my-eicher/${name}.jpg`;
 
   return (
     <figure className="mt-5">

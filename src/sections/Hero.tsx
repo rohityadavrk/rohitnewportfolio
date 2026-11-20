@@ -1,5 +1,6 @@
 import type { PointerEvent } from "react";
 import Navigation from "../components/Navigation";
+import { imgRohitPortrait } from "../data/assets";
 import { resumeUrl } from "../data/portfolio";
 
 const skills = ["Prototyping", "User Flows", "User Research", "Wireframing"];
@@ -60,7 +61,7 @@ export default function Hero() {
           >
             <div aria-hidden="true" className="hero-portrait-backdrop absolute inset-x-[10%] top-[12%] bottom-0 -z-10 rounded-t-full rounded-b-2xl border border-line" />
             <img
-              src="/assets/rohit-yadav-cutout.png"
+              src={imgRohitPortrait}
               alt="Portrait of Rohit Yadav"
               width={852}
               height={900}
